@@ -2,6 +2,7 @@ package com.landerer.argocd.tutorial
 
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
@@ -9,5 +10,5 @@ import org.springframework.web.bind.annotation.RestController
 class TutorialController {
 
     @GetMapping
-    fun greeting() = "Hello, World!"
+    fun greeting(@RequestParam("name", required = true) name: String) = "Hello, $name!"
 }
