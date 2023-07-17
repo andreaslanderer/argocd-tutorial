@@ -10,5 +10,5 @@ import org.springframework.web.bind.annotation.RestController
 class TutorialController {
 
     @GetMapping
-    fun greeting(@RequestParam("name", required = true) name: String) = "Hello, $name!"
+    fun greeting(@RequestParam name: String) = "Hello, $name!"
 }
